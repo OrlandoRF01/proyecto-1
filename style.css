@@ -12,18 +12,29 @@ body {
 header {
     background-color: #fff159;
     color: #fff;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     padding: 12px 16px;
 }
 
+.logo {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+}
 
 .logo img {
     height: 50px;
     margin-left: 70px;
 }
 
+.search-form {
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 
 .search-form input {
     width: 700px;
@@ -34,14 +45,17 @@ header {
     margin-right: 8px;
 }
 
+.user-menu {
+    grid-column: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 
 .user-menu img {
     height: 50px;
     margin-right: 100px;
-
-
 }
-
 
 .carousel {
     display: flex;
